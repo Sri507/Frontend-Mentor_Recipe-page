@@ -1,0 +1,224 @@
+:root {
+  --var-white: hsl(0, 0%, 100%);
+  --var-stone-100: hsl(30, 54%, 90%);
+  --var-stone-150: hsl(30, 18%, 87%);
+  --var-stone-600: hsl(30, 10%, 34%);
+  --var-stone-900: hsl(24, 5%, 18%);
+  --var-brown-800: hsl(14, 45%, 36%);
+  --var-rose-50: hsl(330, 100%, 98%);
+  --var-rose-800: hsl(332, 51%, 32%);
+  --var-font-size: 16px;
+  --var-ff1: "Young Serif", serif;
+  --var-ff2: "Outfit", serif;
+}
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  font-family: var(--var-ff2);
+  color: var(--var-stone-600);
+  font-size: var(--var-font-size);
+}
+.container {
+  background: var(--var-white);
+  width: 375px;
+}
+.container img {
+  display: block;
+  max-width: 100%;
+}
+.cover {
+  padding: 0 32px;
+}
+.info h1 {
+  font-family: var(--var-ff1);
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: var(--var-stone-900);
+  padding: 32.5px 0 24px 0;
+  line-height: 1;
+}
+.info p {
+  margin-bottom: 32px;
+}
+.preparation {
+  background: var(--var-rose-50);
+  padding: 24px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+.preparation h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--var-rose-800);
+  margin-bottom: 16px;
+}
+.preparation ul {
+  list-style-position: outside;
+  padding-left: 24px;
+}
+.preparation ul li::marker {
+  color: var(--var-rose-800);
+}
+.preparation ul li {
+  padding-left: 16px;
+  padding-bottom: 16px;
+}
+.preparation ul li:last-child {
+  padding-bottom: 0;
+}
+.ingredients h1 {
+  font-family: var(--var-ff1);
+  color: var(--var-brown-800);
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.ingredients ul {
+  list-style-position: outside;
+  padding-left: 24px;
+  border-bottom: 1px solid var(--var-stone-150);
+}
+.ingredients ul li::marker {
+  color: var(--var-brown-800);
+  font-weight: 400;
+}
+.ingredients ul li {
+  padding-left: 24px;
+  padding-bottom: 24px;
+}
+
+.instructions h1 {
+  font-family: var(--var-ff1);
+  color: var(--var-brown-800);
+  font-weight: 400;
+  margin: 24px 0;
+}
+.instructions ol {
+  list-style-position: outside;
+  padding-left: 24px;
+  border-bottom: 1px solid var(--var-stone-150);
+}
+.instructions ol li::marker {
+  color: var(--var-brown-800);
+  font-weight: 700;
+}
+.instructions ol li {
+  padding-left: 24px;
+  padding-bottom: 24px;
+}
+.nutrition h1 {
+  font-family: var(--var-ff1);
+  color: var(--var-brown-800);
+  font-weight: 400;
+  margin: 24px 0;
+}
+.nutrition p {
+  margin-bottom: 24px;
+  font-family: var(--var-ff2);
+}
+.values {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--var-stone-150);
+  display: flex;
+}
+.values:first-child {
+  padding-top: 0;
+}
+.values:last-child {
+  border-bottom: none;
+  padding-bottom: 44px;
+}
+.first,
+.second {
+  width: 50%;
+  margin-left: 32px;
+}
+.second {
+  color: var(--var-brown-800);
+  font-weight: 700;
+}
+
+@media (min-width: 376px) {
+  body {
+    background: var(--var-stone-100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    border-radius: 1.5rem;
+    margin: clamp(10%, 15%, 124px) 0;
+    width: 740px;
+    padding: 40px;
+  }
+  .container img {
+    border-radius: 10px;
+  }
+  .cover {
+    padding: 0;
+  }
+  .info h1 {
+    padding-top: 36px;
+  }
+  .preparation {
+    padding: 28px;
+    margin-bottom: 28px;
+  }
+  .preparation ul li {
+    padding-bottom: 12px;
+  }
+  .preparation ul li:last-child {
+    padding-bottom: 0;
+  }
+  .ingredients h1 {
+    margin-bottom: 20px;
+  }
+  .ingredients ul li {
+    padding-bottom: 12px;
+  }
+  .ingredients ul li:last-child {
+    padding-bottom: 32px;
+  }
+  .instructions h1 {
+    margin: 24px 0;
+  }
+  .instructions ol li {
+    padding-bottom: 12px;
+  }
+  .instructions ol li:last-child {
+    padding-bottom: 32px;
+  }
+  .nutrition h1 {
+    margin: 28px 0;
+  }
+  .nutrition p {
+    margin-bottom: 28px;
+  }
+  .values {
+    padding: 12px 0;
+  }
+  .values:last-child {
+    padding-bottom: 0;
+  }
+  .second {
+    margin-left: -20px;
+  }
+}
